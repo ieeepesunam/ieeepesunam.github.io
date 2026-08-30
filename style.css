@@ -210,6 +210,76 @@ button:hover {
     color: #6b7280;
 }
 
+/* PÁGINA DE DETALLE DE DEPARTAMENTO */
+.volver-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #0077b6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.volver-link:hover {
+    text-decoration: underline;
+}
+
+.funciones-lista {
+    list-style: disc;
+    text-align: left;
+    max-width: 560px;
+    margin: 20px auto 0;
+    color: #374151;
+    line-height: 1.9;
+}
+
+.actividad-hero-placeholder {
+    width: 100%;
+    max-width: 700px;
+    height: 320px;
+    margin: 20px auto;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #111827, #0077b6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.actividad-meta {
+    color: #0077b6;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.actividad-galeria {
+    max-width: 900px;
+    margin: 20px auto 60px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.galeria-item {
+    width: 260px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: #e5e7eb;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
 /* DEPARTAMENTOS */
 .depto-grid {
     display: flex;
@@ -312,6 +382,9 @@ button:hover {
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .carousel-img-placeholder {
