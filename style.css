@@ -79,6 +79,11 @@ main h2 {
     margin-bottom: 20px;
 }
 
+main p {
+    line-height: 1.6;
+    color: #374151;
+}
+
 button {
     background-color: #0077b6;
     color: white;
@@ -88,6 +93,34 @@ button {
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+button:hover {
+    background-color: #005f8f;
+}
+
+/* QUIENES SOMOS */
+.mision-vision {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.mision-vision .bloque {
+    flex: 1 1 300px;
+}
+
+.mision-vision h3 {
+    color: #0077b6;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mision-vision p {
+    line-height: 1.6;
+    color: #374151;
 }
 
 /* MESA DIRECTIVA */
@@ -104,12 +137,14 @@ button {
     text-align: center;
 }
 
-.foto-placeholder {
+.foto {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: #d1d5db;
     margin: 0 auto 15px;
+    display: block;
+    object-fit: cover;
 }
 
 .miembro h3 {
@@ -128,6 +163,35 @@ button {
     color: #6b7280;
 }
 
+/* DEPARTAMENTOS */
+.depto-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.depto {
+    width: 220px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.depto h3 {
+    color: #0077b6;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.depto p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
 /* ACTIVIDADES */
 .lista-actividades {
     list-style: none;
@@ -138,6 +202,14 @@ button {
 .lista-actividades li {
     padding: 12px 0;
     border-bottom: 1px solid #e5e7eb;
+}
+
+/* CONTACTO */
+.dato-contacto {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #0077b6;
 }
 
 /* FOOTER */
@@ -157,5 +229,29 @@ footer {
 
 .redes a {
     color: white;
-    text-decoration: none;
-    font-size:
+    font-size: 22px;
+    transition: color 0.2s ease;
+}
+
+.redes a:hover {
+    color: #0077b6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
