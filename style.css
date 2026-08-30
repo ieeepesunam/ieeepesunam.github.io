@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -54,6 +58,7 @@ header {
     background-color: #111827;
     color: white;
     padding: 40px 20px;
+    scroll-margin-top: 70px;
 }
 
 .header-container {
@@ -113,6 +118,7 @@ main section {
     margin: 60px auto;
     padding: 20px;
     text-align: center;
+    scroll-margin-top: 70px;
 }
 
 main h2 {
