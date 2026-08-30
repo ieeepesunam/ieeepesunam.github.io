@@ -259,6 +259,38 @@ button:hover {
     padding: 0 20px;
 }
 
+.depto-lider {
+    margin-top: 16px;
+    padding: 14px 20px 4px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-mini {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #d1d5db;
+    margin-bottom: 8px;
+}
+
+.depto-lider .lider-nombre {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1f2937;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+.depto-lider .lider-cargo {
+    font-size: 12px;
+    color: #0077b6;
+    padding: 0;
+}
+
 /* ACTIVIDADES - CARRUSEL */
 .carousel {
     position: relative;
