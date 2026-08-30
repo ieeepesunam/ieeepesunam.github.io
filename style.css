@@ -252,16 +252,110 @@ button:hover {
     padding: 0 20px;
 }
 
-/* ACTIVIDADES */
-.lista-actividades {
-    list-style: none;
-    text-align: left;
-    margin-top: 20px;
+/* ACTIVIDADES - CARRUSEL */
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 30px auto 0;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
-.lista-actividades li {
-    padding: 12px 0;
-    border-bottom: 1px solid #e5e7eb;
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-img-placeholder {
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(135deg, #111827, #0077b6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.carousel-caption {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    padding: 18px 24px;
+    text-align: left;
+}
+
+.carousel-caption h3 {
+    color: #0077b6;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.carousel-caption p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 0;
+    height: 320px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(17, 24, 39, 0.35);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    background: rgba(17, 24, 39, 0.6);
+}
+
+.carousel-prev {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.carousel-next {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 0;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease;
+}
+
+.dot.active {
+    background-color: #0077b6;
 }
 
 /* CONTACTO */
@@ -331,6 +425,17 @@ footer {
     }
 
     header p {
+        font-size: 16px;
+    }
+
+    .carousel-img-placeholder {
+        height: 200px;
+        font-size: 13px;
+    }
+
+    .carousel-arrow {
+        height: 200px;
+        width: 34px;
         font-size: 16px;
     }
 }
