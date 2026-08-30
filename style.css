@@ -256,13 +256,14 @@ button:hover {
 /* ACTIVIDADES - CARRUSEL */
 .carousel {
     position: relative;
-    width: 100vw;
+    width: 92vw;
+    max-width: 1150px;
     left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    transform: translateX(-50%);
     margin-top: 30px;
     overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-track {
@@ -299,9 +300,7 @@ button:hover {
 }
 
 .carousel-caption-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 22px 24px;
+    padding: 22px 28px;
     text-align: left;
 }
 
