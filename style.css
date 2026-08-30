@@ -287,6 +287,13 @@ button:hover {
     letter-spacing: 0.5px;
 }
 
+.carousel-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
 .carousel-caption {
     background-color: #111827;
 }
@@ -434,6 +441,10 @@ footer {
     .carousel-img-placeholder {
         height: 200px;
         font-size: 13px;
+    }
+
+    .carousel-img {
+        height: 200px;
     }
 
     .carousel-arrow {
