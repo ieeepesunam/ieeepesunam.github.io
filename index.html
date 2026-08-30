@@ -9,6 +9,10 @@
         content="IEEE PES UNAM - Capítulo estudiantil de la Power & Energy Society en la Facultad de Ingeniería, UNAM.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 </head>
 
 <body>
@@ -151,11 +155,34 @@
 
         <section id="actividades" class="qua-hemos-hecho">
             <h2>¿Qué hemos hecho?</h2>
-            <ul class="lista-actividades">
-                <li>[Nombre de actividad/evento] — [breve descripción]</li>
-                <li>[Nombre de actividad/evento] — [breve descripción]</li>
-                <li>[Nombre de actividad/evento] — [breve descripción]</li>
-            </ul>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <div class="carousel-img-placeholder">[Foto de la actividad]</div>
+                        <div class="carousel-caption">
+                            <h3>[Nombre de actividad/evento]</h3>
+                            <p>[breve descripción]</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-img-placeholder">[Foto de la actividad]</div>
+                        <div class="carousel-caption">
+                            <h3>[Nombre de actividad/evento]</h3>
+                            <p>[breve descripción]</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-img-placeholder">[Foto de la actividad]</div>
+                        <div class="carousel-caption">
+                            <h3>[Nombre de actividad/evento]</h3>
+                            <p>[breve descripción]</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-prev" aria-label="Actividad anterior">&#10094;</button>
+                <button class="carousel-arrow carousel-next" aria-label="Siguiente actividad">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
         </section>
 
         <section id="contacto" class="contacto">
@@ -183,6 +210,56 @@
             </a>
         </div>
     </footer>
+    <script>
+        (function () {
+            var carousel = document.querySelector('.carousel');
+            if (!carousel) return;
+
+            var track = carousel.querySelector('.carousel-track');
+            var slides = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-slide'));
+            var dotsContainer = carousel.querySelector('.carousel-dots');
+            var prevBtn = carousel.querySelector('.carousel-prev');
+            var nextBtn = carousel.querySelector('.carousel-next');
+            var index = 0;
+            var timer;
+
+            slides.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1));
+                dot.addEventListener('click', function () { goTo(i); });
+                dotsContainer.appendChild(dot);
+            });
+            var dots = Array.prototype.slice.call(dotsContainer.children);
+
+            function update() {
+                track.style.transform = 'translateX(-' + (index * 100) + '%)';
+                dots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
+            }
+
+            function goTo(i) {
+                index = (i + slides.length) % slides.length;
+                update();
+                resetTimer();
+            }
+
+            function next() { goTo(index + 1); }
+            function prev() { goTo(index - 1); }
+
+            function resetTimer() {
+                clearInterval(timer);
+                timer = setInterval(next, 5000);
+            }
+
+            nextBtn.addEventListener('click', next);
+            prevBtn.addEventListener('click', prev);
+            carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
+            carousel.addEventListener('mouseleave', resetTimer);
+
+            update();
+            resetTimer();
+        })();
+    </script>
 
 </body>
 
