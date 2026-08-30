@@ -232,6 +232,15 @@ button:hover {
     color: #0077b6;
 }
 
+.dato-contacto a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.dato-contacto a:hover {
+    text-decoration: underline;
+}
+
 /* FOOTER */
 footer {
     background-color: #111827;
