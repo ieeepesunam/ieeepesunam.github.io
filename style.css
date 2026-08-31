@@ -509,6 +509,77 @@ button:hover {
     object-fit: contain;
 }
 
+/* RAMAS HERMANAS */
+.ramas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.rama-card {
+    width: 140px;
+    text-align: center;
+}
+
+.rama-logo-frame {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 8px;
+    color: #9ca3af;
+    font-size: 11px;
+    text-align: center;
+}
+
+.rama-logo-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.rama-card-ieee .rama-logo-frame-ieee {
+    background-color: #111827;
+    border-color: #111827;
+}
+
+.rama-nombre {
+    font-weight: bold;
+    color: #1f2937;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.rama-social {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rama-social a {
+    width: 32px;
+    height: 32px;
+    background-color: #0077b6;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.rama-social a:hover {
+    background-color: #005f8f;
+}
+
 /* CONTACTO */
 .dato-contacto {
     font-size: 18px;
