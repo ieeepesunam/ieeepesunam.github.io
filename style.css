@@ -512,16 +512,13 @@ button:hover {
 /* RAMAS HERMANAS */
 .ramas-strip {
     position: relative;
-    width: 92vw;
-    max-width: 1150px;
+    width: 100vw;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 30px;
-    background-color: #0077b6;
-    border-radius: 16px;
+    background-color: #111827;
     padding: 30px 20px;
     overflow-x: auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .ramas-grid {
