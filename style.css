@@ -291,6 +291,10 @@ button:hover {
 }
 
 /* DEPARTAMENTOS */
+.departamentos {
+    max-width: 1040px;
+}
+
 .depto-grid {
     display: flex;
     flex-wrap: wrap;
@@ -642,6 +646,12 @@ footer {
 
 .redes a:hover {
     color: #0077b6;
+}
+
+.ultima-actualizacion {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #6b7280;
 }
 
 /* RESPONSIVE */
