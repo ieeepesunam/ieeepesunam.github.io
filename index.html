@@ -385,7 +385,8 @@
                     titulo: 'Schneider Electric',
                     fecha: '[Fecha]',
                     lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con Schneider Electric: qué se hizo, quién participó y qué se aprendió.]'
+                    desc: '[Descripción de la actividad realizada con Schneider Electric: qué se hizo, quién participó y qué se aprendió.]',
+                    img: 'fotos/schneider-prueba.png'
                 },
                 burns: {
                     titulo: 'Burns & McDonnell',
@@ -432,6 +433,7 @@
             var metaEl = document.getElementById('colab-modal-meta');
             var descEl = document.getElementById('colab-modal-desc');
             var closeBtn = document.getElementById('colab-modal-close');
+            var imgEl = document.getElementById('colab-modal-img');
             var botones = document.querySelectorAll('[data-colab]');
 
             function abrir(key) {
@@ -440,6 +442,17 @@
                 tituloEl.textContent = d.titulo;
                 metaEl.textContent = '📅 ' + d.fecha + '   ·   📍 ' + d.lugar;
                 descEl.textContent = d.desc;
+                if (d.img) {
+                    imgEl.style.backgroundImage = "url('" + d.img + "')";
+                    imgEl.style.backgroundSize = 'cover';
+                    imgEl.style.backgroundPosition = 'center';
+                    imgEl.textContent = '';
+                } else {
+                    imgEl.style.backgroundImage = '';
+                    imgEl.style.backgroundSize = '';
+                    imgEl.style.backgroundPosition = '';
+                    imgEl.textContent = '[Foto de la actividad]';
+                }
                 modal.classList.add('abierto');
                 document.body.style.overflow = 'hidden';
             }
