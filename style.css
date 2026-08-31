@@ -502,7 +502,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9fafb;
+    background-color: white;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     color: #9ca3af;
