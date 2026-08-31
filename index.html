@@ -221,10 +221,31 @@
         <section id="colaboradores" class="colaboradores">
             <h2>Empresas con las que hemos colaborado</h2>
             <div class="colab-grid">
-                <div class="colab-logo-frame">Schneider Electric</div>
-                <div class="colab-logo-frame">[Logo empresa]</div>
-                <div class="colab-logo-frame">[Logo empresa]</div>
-                <div class="colab-logo-frame">[Logo empresa]</div>
+                <button type="button" class="colab-logo-frame" data-colab="schneider"><img src="logos/schneider-sq.jpg"
+                        alt="Schneider Electric"></button>
+                <button type="button" class="colab-logo-frame" data-colab="burns"><img src="logos/burns-sq.jpg"
+                        alt="Burns &amp; McDonnell"></button>
+                <button type="button" class="colab-logo-frame" data-colab="siemens"><img src="logos/siemens-sq.jpg"
+                        alt="Siemens"></button>
+                <button type="button" class="colab-logo-frame" data-colab="condumex"><img src="logos/condumex-sq.jpg"
+                        alt="Condumex"></button>
+                <button type="button" class="colab-logo-frame" data-colab="abb"><img src="logos/abb-sq.jpg"
+                        alt="ABB"></button>
+                <button type="button" class="colab-logo-frame" data-colab="ineel"><img src="logos/ineel-sq.jpg"
+                        alt="INEEL"></button>
+                <button type="button" class="colab-logo-frame" data-colab="cenace"><img src="logos/cenace-sq.jpg"
+                        alt="CENACE"></button>
+            </div>
+
+            <div class="modal-overlay" id="colab-modal">
+                <div class="modal-box">
+                    <button type="button" class="modal-close" id="colab-modal-close"
+                        aria-label="Cerrar">&times;</button>
+                    <div class="modal-img-placeholder" id="colab-modal-img">[Foto de la actividad]</div>
+                    <h3 id="colab-modal-title"></h3>
+                    <p class="modal-meta" id="colab-modal-meta"></p>
+                    <p id="colab-modal-desc"></p>
+                </div>
             </div>
         </section>
 
@@ -357,6 +378,93 @@
         </div>
         <p class="ultima-actualizacion">Última actualización: 30 de agosto de 2026</p>
     </footer>
+    <script>
+        (function () {
+            var datos = {
+                schneider: {
+                    titulo: 'Schneider Electric',
+                    fecha: '[Fecha]',
+                    lugar: '[Lugar]',
+                    desc: '[Descripción de la actividad realizada con Schneider Electric: qué se hizo, quién participó y qué se aprendió.]'
+                },
+                burns: {
+                    titulo: 'Burns & McDonnell',
+                    fecha: '[Fecha]',
+                    lugar: '[Lugar]',
+                    desc: '[Descripción de la actividad realizada con Burns & McDonnell.]'
+                },
+                siemens: {
+                    titulo: 'Siemens',
+                    fecha: '[Fecha]',
+                    lugar: '[Lugar]',
+                    desc: '[Descripción de la actividad realizada con Siemens.]'
+                },
+                condumex: {
+                    titulo: 'Condumex',
+                    fecha: '[Fecha]',
+                    lugar: '[Lugar]',
+                    desc: '[Descripción de la actividad realizada con Condumex.]'
+                },
+                abb: {
+                    titulo: 'ABB',
+                    fecha: '[Fecha]',
+                    lugar: '[Lugar]',
+                    desc: '[Descripción de la actividad realizada con ABB.]'
+                },
+                ineel: {
+                    titulo: 'INEEL',
+                    fecha: '[Fecha]',
+                    lugar: '[Lugar]',
+                    desc: '[Descripción de la actividad realizada con INEEL.]'
+                },
+                cenace: {
+                    titulo: 'CENACE',
+                    fecha: '[Fecha]',
+                    lugar: '[Lugar]',
+                    desc: '[Descripción de la actividad realizada con CENACE.]'
+                }
+            };
+
+            var modal = document.getElementById('colab-modal');
+            if (!modal) return;
+
+            var tituloEl = document.getElementById('colab-modal-title');
+            var metaEl = document.getElementById('colab-modal-meta');
+            var descEl = document.getElementById('colab-modal-desc');
+            var closeBtn = document.getElementById('colab-modal-close');
+            var botones = document.querySelectorAll('[data-colab]');
+
+            function abrir(key) {
+                var d = datos[key];
+                if (!d) return;
+                tituloEl.textContent = d.titulo;
+                metaEl.textContent = '📅 ' + d.fecha + '   ·   📍 ' + d.lugar;
+                descEl.textContent = d.desc;
+                modal.classList.add('abierto');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function cerrar() {
+                modal.classList.remove('abierto');
+                document.body.style.overflow = '';
+            }
+
+            botones.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    abrir(btn.getAttribute('data-colab'));
+                });
+            });
+
+            closeBtn.addEventListener('click', cerrar);
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) cerrar();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') cerrar();
+            });
+        })();
+    </script>
+
     <script>
         (function () {
             var carousel = document.querySelector('.carousel');
