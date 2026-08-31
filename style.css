@@ -511,9 +511,10 @@ button:hover {
 
 /* RAMAS HERMANAS */
 .ramas-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 160px);
     justify-content: center;
+    justify-items: center;
     gap: 24px;
     margin-top: 30px;
 }
@@ -663,5 +664,19 @@ footer {
         height: 200px;
         width: 34px;
         font-size: 16px;
+    }
+
+    .ramas-grid {
+        grid-template-columns: repeat(3, 100px);
+        gap: 12px;
+    }
+
+    .rama-card {
+        width: 100px;
+    }
+
+    .rama-logo-frame {
+        width: 70px;
+        height: 70px;
     }
 }
