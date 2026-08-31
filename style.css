@@ -527,7 +527,7 @@ button:hover {
 
 /* VENTANA EMERGENTE DE COLABORADORES */
 .modal-overlay {
-    display: none;
+    display: flex;
     position: fixed;
     inset: 0;
     background: rgba(17, 24, 39, 0.6);
@@ -535,22 +535,34 @@ button:hover {
     justify-content: center;
     padding: 20px;
     z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 .modal-overlay.abierto {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .modal-box {
     position: relative;
     background: white;
     border-radius: 14px;
-    max-width: 480px;
+    max-width: 600px;
     width: 100%;
     padding: 30px;
     text-align: left;
     max-height: 85vh;
     overflow-y: auto;
+    transform: scale(0.92) translateY(12px);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.abierto .modal-box {
+    transform: scale(1) translateY(0);
 }
 
 .modal-close {
@@ -574,7 +586,7 @@ button:hover {
 
 .modal-img-placeholder {
     width: 100%;
-    height: 180px;
+    height: 280px;
     border-radius: 10px;
     background: linear-gradient(135deg, #111827, #0077b6);
     color: white;
