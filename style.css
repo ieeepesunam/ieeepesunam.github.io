@@ -505,6 +505,15 @@ button:hover {
     font-size: 12px;
     text-align: center;
     padding: 10px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.colab-logo-frame:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: #0077b6;
+    color: #0077b6;
 }
 
 .colab-logo-frame img {
