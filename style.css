@@ -348,15 +348,6 @@ button:hover {
     align-items: center;
 }
 
-.foto-mini {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    object-fit: cover;
-    background-color: #d1d5db;
-    margin-bottom: 8px;
-}
-
 .depto-lider .lider-nombre {
     font-size: 14px;
     font-weight: bold;
