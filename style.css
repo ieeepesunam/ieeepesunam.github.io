@@ -510,17 +510,31 @@ button:hover {
 }
 
 /* RAMAS HERMANAS */
-.ramas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 160px);
-    justify-content: center;
-    justify-items: center;
-    gap: 24px;
+.ramas-strip {
+    position: relative;
+    width: 92vw;
+    max-width: 1150px;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 30px;
+    background-color: #0077b6;
+    border-radius: 16px;
+    padding: 30px 20px;
+    overflow-x: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ramas-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    width: max-content;
+    margin: 0 auto;
 }
 
 .rama-card {
     width: 140px;
+    flex: 0 0 auto;
     text-align: center;
 }
 
@@ -531,8 +545,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9fafb;
-    border: 1px solid #e5e7eb;
+    background-color: white;
     border-radius: 8px;
     padding: 8px;
     color: #9ca3af;
@@ -546,14 +559,9 @@ button:hover {
     object-fit: contain;
 }
 
-.rama-card-ieee .rama-logo-frame-ieee {
-    background-color: #f9fafb;
-    border-color: #e5e7eb;
-}
-
 .rama-nombre {
     font-weight: bold;
-    color: #1f2937;
+    color: white;
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -567,18 +575,19 @@ button:hover {
 .rama-social a {
     width: 32px;
     height: 32px;
-    background-color: #0077b6;
-    color: white;
+    background-color: white;
+    color: #0077b6;
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .rama-social a:hover {
-    background-color: #005f8f;
+    background-color: #111827;
+    color: white;
 }
 
 /* CONTACTO */
@@ -666,9 +675,12 @@ footer {
         font-size: 16px;
     }
 
+    .ramas-strip {
+        padding: 20px 16px;
+    }
+
     .ramas-grid {
-        grid-template-columns: repeat(3, 100px);
-        gap: 12px;
+        gap: 14px;
     }
 
     .rama-card {
