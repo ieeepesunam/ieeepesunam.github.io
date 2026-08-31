@@ -570,20 +570,35 @@ button:hover {
 }
 
 .rama-social a {
-    width: 32px;
-    height: 32px;
-    background-color: white;
-    color: #0077b6;
-    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 15px;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .rama-social a:hover {
-    background-color: #111827;
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.rama-social a:has(.fa-facebook):hover {
+    background-color: #1877f2;
+    color: white;
+}
+
+.rama-social a:has(.fa-instagram):hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    color: white;
+}
+
+.rama-social a:has(.fa-globe):hover {
+    background-color: #0077b6;
     color: white;
 }
 
