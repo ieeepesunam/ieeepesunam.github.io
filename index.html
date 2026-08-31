@@ -1,521 +1,809 @@
-<!DOCTYPE html>
-<html lang="es">
+html {
+scroll-behavior: smooth;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IEEE PES UNAM</title>
-    <meta name="description"
-        content="IEEE PES UNAM - Capítulo estudiantil de la Power & Energy Society en la Facultad de Ingeniería, UNAM.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-</head>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-<body>
+body {
+font-family: 'Segoe UI', Arial, sans-serif;
+color: #1f2937;
+overflow-x: hidden;
+}
 
-    <nav>
-        <div class="nav-container">
-            <span class="logo">IEEE PES UNAM</span>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">¿Quiénes somos?</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#departamentos">Departamentos</a></li>
-                <li><a href="#actividades">Qué hemos hecho</a></li>
-                <li><a href="#colaboradores">Colaboradores</a></li>
-                <li><a href="#ramas">Ramas Hermanas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+/* NAV */
+nav {
+background-color: #111827;
+position: sticky;
+top: 0;
+z-index: 10;
+}
 
-    <header id="inicio">
-        <div class="header-container">
-            <div class="header-logos header-logos-izq">
-                <span class="header-logo-frame"><img src="logos/unam.png" alt="UNAM"></span>
-                <span class="header-logo-frame"><img src="logos/facultadIngenieria.jpg"
-                        alt="Facultad de Ingeniería"></span>
-            </div>
-            <div class="header-texto">
-                <h1>IEEE PES UNAM</h1>
-                <p>Power & Energy Society Student Chapter</p>
-            </div>
-            <div class="header-logos header-logos-der">
-                <span class="header-logo-frame"><img src="logos/ieee.jpg" alt="IEEE"></span>
-                <span class="header-logo-frame"><img src="logos/pes_ieee.jpeg" alt="IEEE PES"></span>
-            </div>
-        </div>
-    </header>
+.nav-container {
+max-width: 1100px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+}
 
-    <main>
-        <section class="bienvenida">
-            <h2>Bienvenidos</h2>
-            <p>
-                Somos una comunidad estudiantil interesada en los sistemas
-                eléctricos de potencia, energía y nuevas tecnologías.
-            </p>
-            <a href="#nosotros"><button>Conócenos</button></a>
-        </section>
+.logo {
+color: white;
+font-weight: bold;
+font-size: 18px;
+}
 
-        <section id="nosotros" class="quienes-somos">
-            <h2>¿Quiénes somos?</h2>
-            <div class="mision-vision">
-                <div class="bloque">
-                    <h3>Misión</h3>
-                    <p>
-                        Impulsar el desarrollo técnico, profesional y humano de la comunidad
-                        estudiantil de la Facultad de Ingeniería de la UNAM mediante capacitación,
-                        proyectos de ingeniería eléctrica, innovación tecnológica y vinculación
-                        estratégica con la industria, IEEE y la sociedad, contribuyendo al desarrollo
-                        sostenible del sector energético.
-                    </p>
-                </div>
-                <div class="bloque">
-                    <h3>Visión</h3>
-                    <p>
-                        Consolidarnos como el capítulo estudiantil IEEE PES líder de la UNAM y uno de
-                        los referentes estudiantiles de potencia y energía en Latinoamérica, reconocido
-                        por la excelencia técnica, la formación de líderes con responsabilidad social,
-                        la innovación en sistemas eléctricos y energías inteligentes, y la generación de
-                        proyectos de impacto para la sociedad.
-                    </p>
-                </div>
-            </div>
-        </section>
+.nav-links {
+list-style: none;
+display: flex;
+gap: 25px;
+}
 
-        <section id="proyectos" class="mesa-directiva">
-            <h2>Mesa Directiva</h2>
-            <div class="tarjetas">
-                <div class="miembro">
-                    <img class="foto" src="fotos/presidente.jpg" alt="Presidente">
-                    <h3>Emiliano Rodríguez</h3>
-                    <p class="cargo">Presidente</p>
-                    <p class="carrera">Ingeniería Eléctrica Electrónica</p>
-                </div>
-                <div class="miembro">
-                    <img class="foto" src="fotos/vicepresidente.jpg" alt="Vicepresidente">
-                    <h3>Ibrahim Ruiz</h3>
-                    <p class="cargo">Vicepresidente</p>
-                    <p class="carrera">Ingeniería Eléctrica Electrónica</p>
-                </div>
-                <div class="miembro">
-                    <img class="foto" src="fotos/secretaria.jpg" alt="Secretaria">
-                    <h3>Evelyn Munive</h3>
-                    <p class="cargo">Secretaria</p>
-                    <p class="carrera">Ingeniería Eléctrica Electrónica</p>
-                </div>
-                <div class="miembro">
-                    <img class="foto" src="fotos/tesorero.jpg" alt="Tesorero">
-                    <h3>Rigoberto Robles</h3>
-                    <p class="cargo">Tesorero</p>
-                    <p class="carrera">Ingeniería Eléctrica Electrónica</p>
-                </div>
-                <div class="miembro">
-                    <img class="foto" src="fotos/webmaster.jpg" alt="Webmaster">
-                    <h3>Luis Maceda</h3>
-                    <p class="cargo">Webmaster</p>
-                    <p class="carrera">Ingeniería Eléctrica Electrónica</p>
-                </div>
-                <div class="miembro">
-                    <img class="foto" src="fotos/asesor.jpg" alt="Asesor">
-                    <h3>Dr. Juan Ramón Rodríguez Rodríguez</h3>
-                    <p class="cargo">Asesor</p>
-                    <p class="carrera">Ingeniería Eléctrica Electrónica</p>
-                </div>
-            </div>
-        </section>
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 15px;
+}
 
-        <section id="departamentos" class="departamentos">
-            <h2>Departamentos</h2>
-            <div class="depto-grid">
-                <a href="departamentos/projectman.html" class="depto">
-                    <img src="fotos/projectman.jpg" alt="Project Management">
-                    <h3>Project Management</h3>
-                    <p>Fomenta la generación de proyectos técnicos innovadores, los coordina y da seguimiento a los
-                        equipos para asegurar su ejecución.</p>
-                    <div class="depto-lider">
-                        <img class="foto" src="fotos/lider-projectman.jpg" alt="Líder de Project Management">
-                        <p class="lider-nombre">Erick Hernández</p>
-                        <p class="lider-cargo">Líder de Departamento</p>
-                    </div>
-                </a>
-                <a href="departamentos/docencia.html" class="depto">
-                    <img src="fotos/docencia.jpg" alt="Docencia">
-                    <h3>Docencia</h3>
-                    <p>Organiza talleres, cursos y capacitaciones para la formación técnica, profesional y humana de los
-                        miembros.</p>
-                    <div class="depto-lider">
-                        <img class="foto" src="fotos/lider-docencia.jpg" alt="Líder de Docencia">
-                        <p class="lider-nombre">Nombre Apellido</p>
-                        <p class="lider-cargo">Líder de Departamento</p>
-                    </div>
-                </a>
-                <a href="departamentos/vinculacion.html" class="depto">
-                    <img src="fotos/vinculacion.jpg" alt="Vinculación">
-                    <h3>Vinculación</h3>
-                    <p>Nexo con el exterior: establece alianzas con empresas e instituciones y gestiona patrocinios y
-                        presencia en eventos.</p>
-                    <div class="depto-lider">
-                        <img class="foto" src="fotos/lider-vinculacion.jpg" alt="Líder de Vinculación">
-                        <p class="lider-nombre">Nombre Apellido</p>
-                        <p class="lider-cargo">Líder de Departamento</p>
-                    </div>
-                </a>
-                <a href="departamentos/marketing.html" class="depto">
-                    <img src="fotos/marketing.jpg" alt="Marketing">
-                    <h3>Marketing</h3>
-                    <p>Promueve la imagen y visibilidad del capítulo: diseña contenido, administra redes sociales y
-                        difunde actividades.</p>
-                    <div class="depto-lider">
-                        <img class="foto" src="fotos/lider-marketing.jpg" alt="Líder de Marketing">
-                        <p class="lider-nombre">Nombre Apellido</p>
-                        <p class="lider-cargo">Líder de Departamento</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+.nav-links a:hover {
+color: #0077b6;
+}
 
-        <section id="actividades" class="qua-hemos-hecho">
-            <h2>¿Qué hemos hecho?</h2>
-            <div class="carousel">
-                <div class="carousel-track">
-                    <a href="actividades/actividad-1.html" class="carousel-slide">
-                        <img src="fotos/malpaso-chicoasen.jpg" alt="Visita a las presas Malpaso y Chicoasén"
-                            class="carousel-img">
-                        <div class="carousel-caption">
-                            <div class="carousel-caption-inner">
-                                <h3>Visita a las presas Malpaso y Chicoasén</h3>
-                                <p>Chiapas · 26 de octubre de 2025</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="actividades/actividad-2.html" class="carousel-slide">
-                        <div class="carousel-img-placeholder">[Foto de la actividad]</div>
-                        <div class="carousel-caption">
-                            <div class="carousel-caption-inner">
-                                <h3>[Nombre de actividad/evento]</h3>
-                                <p>[breve descripción]</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="actividades/actividad-3.html" class="carousel-slide">
-                        <div class="carousel-img-placeholder">[Foto de la actividad]</div>
-                        <div class="carousel-caption">
-                            <div class="carousel-caption-inner">
-                                <h3>[Nombre de actividad/evento]</h3>
-                                <p>[breve descripción]</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <button class="carousel-arrow carousel-prev" aria-label="Actividad anterior">&#10094;</button>
-                <button class="carousel-arrow carousel-next" aria-label="Siguiente actividad">&#10095;</button>
-                <div class="carousel-dots"></div>
-            </div>
-        </section>
+/* HEADER */
+header {
+background-color: #111827;
+color: white;
+padding: 40px 20px;
+scroll-margin-top: 70px;
+}
 
-        <section id="colaboradores" class="colaboradores">
-            <h2>Empresas con las que hemos colaborado</h2>
-            <div class="colab-grid">
-                <button type="button" class="colab-logo-frame" data-colab="schneider"><img src="logos/schneider-sq.jpg"
-                        alt="Schneider Electric"></button>
-                <button type="button" class="colab-logo-frame" data-colab="burns"><img src="logos/burns-sq.jpg"
-                        alt="Burns &amp; McDonnell"></button>
-                <button type="button" class="colab-logo-frame" data-colab="siemens"><img src="logos/siemens-sq.jpg"
-                        alt="Siemens"></button>
-                <button type="button" class="colab-logo-frame" data-colab="condumex"><img src="logos/condumex-sq.jpg"
-                        alt="Condumex"></button>
-                <button type="button" class="colab-logo-frame" data-colab="abb"><img src="logos/abb-sq.jpg"
-                        alt="ABB"></button>
-                <button type="button" class="colab-logo-frame" data-colab="ineel"><img src="logos/ineel-sq.jpg"
-                        alt="INEEL"></button>
-                <button type="button" class="colab-logo-frame" data-colab="cenace"><img src="logos/cenace-sq.jpg"
-                        alt="CENACE"></button>
-            </div>
+.header-container {
+max-width: 1100px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+flex-wrap: wrap;
+}
 
-            <div class="modal-overlay" id="colab-modal">
-                <div class="modal-box">
-                    <button type="button" class="modal-close" id="colab-modal-close"
-                        aria-label="Cerrar">&times;</button>
-                    <div class="modal-img-placeholder" id="colab-modal-img">[Foto de la actividad]</div>
-                    <h3 id="colab-modal-title"></h3>
-                    <p class="modal-meta" id="colab-modal-meta"></p>
-                    <p id="colab-modal-desc"></p>
-                </div>
-            </div>
-        </section>
+.header-logos {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+flex: 0 0 auto;
+}
 
-        <section id="ramas" class="ramas-hermanas">
-            <h2>Ramas Hermanas</h2>
-            <div class="ramas-strip">
-                <div class="ramas-grid">
-                    <div class="rama-card">
-                        <div class="rama-logo-frame"><img src="logos/facultad-sq.jpg" alt="Facultad de Ingeniería">
-                        </div>
-                        <p class="rama-nombre">Facultad de Ingeniería</p>
-                        <div class="rama-social">
-                            <a href="https://www.facebook.com/share/1EU8mQFqKt/" target="_blank" rel="noopener"
-                                aria-label="Facebook de la Facultad"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/fiunam_mx" target="_blank" rel="noopener"
-                                aria-label="Instagram de la Facultad"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.ingenieria.unam.mx/" target="_blank" rel="noopener"
-                                aria-label="Sitio web de la Facultad"><i class="fa-solid fa-globe"></i></a>
-                        </div>
-                    </div>
-                    <div class="rama-card">
-                        <div class="rama-logo-frame"><img src="logos/pes-sq.jpg" alt="PES"></div>
-                        <p class="rama-nombre">PES</p>
-                        <div class="rama-social">
-                            <a href="https://www.facebook.com/share/1GUXQq4pQn/" target="_blank" rel="noopener"
-                                aria-label="Facebook de PES"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/ieee_pes_unam" target="_blank" rel="noopener"
-                                aria-label="Instagram de PES"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="rama-card">
-                        <div class="rama-logo-frame"><img src="logos/ras-sq.jpg" alt="RAS"></div>
-                        <p class="rama-nombre">RAS</p>
-                        <div class="rama-social">
-                            <a href="https://www.instagram.com/ieee_ras_unam" target="_blank" rel="noopener"
-                                aria-label="Instagram de RAS"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="rama-card">
-                        <div class="rama-logo-frame"><img src="logos/comsoc-sq.jpg" alt="ComSoc"></div>
-                        <p class="rama-nombre">ComSoc</p>
-                        <div class="rama-social">
-                            <a href="https://www.facebook.com/share/1cLiWduY2c/" target="_blank" rel="noopener"
-                                aria-label="Facebook de ComSoc"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/ieee_comsoc_unam" target="_blank" rel="noopener"
-                                aria-label="Instagram de ComSoc"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="rama-card rama-card-ieee">
-                        <div class="rama-logo-frame rama-logo-frame-ieee"><img src="logos/ieee-sq.jpg" alt="IEEE"></div>
-                        <p class="rama-nombre">IEEE</p>
-                        <div class="rama-social">
-                            <a href="https://www.facebook.com/share/14mGkkDggvJ/" target="_blank" rel="noopener"
-                                aria-label="Facebook de IEEE"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/ieeeorg" target="_blank" rel="noopener"
-                                aria-label="Instagram de IEEE"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.ieee.org/" target="_blank" rel="noopener"
-                                aria-label="Sitio web de IEEE"><i class="fa-solid fa-globe"></i></a>
-                        </div>
-                    </div>
-                    <div class="rama-card">
-                        <div class="rama-logo-frame"><img src="logos/computer-sq.jpg" alt="Computer Society"></div>
-                        <p class="rama-nombre">Computer</p>
-                        <div class="rama-social">
-                            <a href="https://www.facebook.com/share/1AzNFtX7Lc/" target="_blank" rel="noopener"
-                                aria-label="Facebook de Computer"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/ieee.cs.unam" target="_blank" rel="noopener"
-                                aria-label="Instagram de Computer"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="rama-card">
-                        <div class="rama-logo-frame"><img src="logos/wie-sq.jpg" alt="WIE"></div>
-                        <p class="rama-nombre">WIE</p>
-                        <div class="rama-social">
-                            <a href="https://www.facebook.com/share/1DWSJLFgsG/" target="_blank" rel="noopener"
-                                aria-label="Facebook de WIE"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/wie_unam_ieee" target="_blank" rel="noopener"
-                                aria-label="Instagram de WIE"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="rama-card">
-                        <div class="rama-logo-frame"><img src="logos/embs-sq.jpg" alt="EMBS"></div>
-                        <p class="rama-nombre">EMBS</p>
-                        <div class="rama-social">
-                            <a href="https://www.facebook.com/share/1Ehx4RQKiM/" target="_blank" rel="noopener"
-                                aria-label="Facebook de EMBS"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/unam_ieee_embs" target="_blank" rel="noopener"
-                                aria-label="Instagram de EMBS"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="rama-card">
-                        <div class="rama-logo-frame"><img src="logos/unam-sq.jpg" alt="UNAM"></div>
-                        <p class="rama-nombre">UNAM</p>
-                        <div class="rama-social">
-                            <a href="https://www.facebook.com/share/1CFUt6AXuG/" target="_blank" rel="noopener"
-                                aria-label="Facebook de UNAM"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/unam_mx" target="_blank" rel="noopener"
-                                aria-label="Instagram de UNAM"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.unam.mx/" target="_blank" rel="noopener"
-                                aria-label="Sitio web de UNAM"><i class="fa-solid fa-globe"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+.header-logo-frame {
+width: 88px;
+height: 56px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;
+border-radius: 8px;
+padding: 6px;
+}
 
-        <section id="contacto" class="contacto">
-            <h2>Contacto</h2>
-            <p>
-                ¿Tienes dudas o te interesa unirte al capítulo? Escríbenos.
-            </p>
-            <p class="dato-contacto">✉️ <a
-                    href="mailto:ieee.unam.fi.estudiantil@gmail.com">ieee.unam.fi.estudiantil@gmail.com</a></p>
-        </section>
-    </main>
+.header-logo-frame img {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+}
 
-    <footer>
-        <p>&copy; 2026 IEEE PES UNAM. Todos los derechos reservados.</p>
-        <div class="redes">
-            <a href="https://www.instagram.com/ieee_pes_unam" target="_blank" rel="noopener" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/ieee-pes-unam-usr" target="_blank" rel="noopener"
-                aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://www.facebook.com/share/1HEidu4KBe/" target="_blank" rel="noopener" aria-label="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-        <p class="ultima-actualizacion">Última actualización: 30 de agosto de 2026</p>
-    </footer>
-    <script>
-        (function () {
-            var datos = {
-                schneider: {
-                    titulo: 'Schneider Electric',
-                    fecha: '[Fecha]',
-                    lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con Schneider Electric: qué se hizo, quién participó y qué se aprendió.]'
-                },
-                burns: {
-                    titulo: 'Burns & McDonnell',
-                    fecha: '[Fecha]',
-                    lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con Burns & McDonnell.]'
-                },
-                siemens: {
-                    titulo: 'Siemens',
-                    fecha: '[Fecha]',
-                    lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con Siemens.]'
-                },
-                condumex: {
-                    titulo: 'Condumex',
-                    fecha: '[Fecha]',
-                    lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con Condumex.]'
-                },
-                abb: {
-                    titulo: 'ABB',
-                    fecha: '[Fecha]',
-                    lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con ABB.]'
-                },
-                ineel: {
-                    titulo: 'INEEL',
-                    fecha: '[Fecha]',
-                    lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con INEEL.]'
-                },
-                cenace: {
-                    titulo: 'CENACE',
-                    fecha: '[Fecha]',
-                    lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con CENACE.]'
-                }
-            };
+.header-texto {
+flex: 1 1 260px;
+text-align: center;
+}
 
-            var modal = document.getElementById('colab-modal');
-            if (!modal) return;
+header h1 {
+font-size: 50px;
+margin: 0;
+}
 
-            var tituloEl = document.getElementById('colab-modal-title');
-            var metaEl = document.getElementById('colab-modal-meta');
-            var descEl = document.getElementById('colab-modal-desc');
-            var closeBtn = document.getElementById('colab-modal-close');
-            var botones = document.querySelectorAll('[data-colab]');
+header p {
+font-size: 20px;
+margin-top: 10px;
+}
 
-            function abrir(key) {
-                var d = datos[key];
-                if (!d) return;
-                tituloEl.textContent = d.titulo;
-                metaEl.textContent = '📅 ' + d.fecha + '   ·   📍 ' + d.lugar;
-                descEl.textContent = d.desc;
-                modal.classList.add('abierto');
-                document.body.style.overflow = 'hidden';
-            }
+/* MAIN SECTIONS */
+main section {
+max-width: 900px;
+margin: 60px auto;
+padding: 20px;
+text-align: center;
+scroll-margin-top: 70px;
+}
 
-            function cerrar() {
-                modal.classList.remove('abierto');
-                document.body.style.overflow = '';
-            }
+main h2 {
+font-size: 32px;
+margin-bottom: 20px;
+}
 
-            botones.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    abrir(btn.getAttribute('data-colab'));
-                });
-            });
+main p {
+line-height: 1.6;
+color: #374151;
+}
 
-            closeBtn.addEventListener('click', cerrar);
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) cerrar();
-            });
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') cerrar();
-            });
-        })();
-    </script>
+button {
+background-color: #0077b6;
+color: white;
+border: none;
+padding: 15px 30px;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 10px;
+}
 
-    <script>
-        (function () {
-            var carousel = document.querySelector('.carousel');
-            if (!carousel) return;
+button:hover {
+background-color: #005f8f;
+}
 
-            var track = carousel.querySelector('.carousel-track');
-            var slides = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-slide'));
-            var dotsContainer = carousel.querySelector('.carousel-dots');
-            var prevBtn = carousel.querySelector('.carousel-prev');
-            var nextBtn = carousel.querySelector('.carousel-next');
-            var index = 0;
-            var timer;
+/* QUIENES SOMOS */
+.mision-vision {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+text-align: left;
+margin-top: 10px;
+}
 
-            slides.forEach(function (_, i) {
-                var dot = document.createElement('button');
-                dot.className = 'dot' + (i === 0 ? ' active' : '');
-                dot.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1));
-                dot.addEventListener('click', function () { goTo(i); });
-                dotsContainer.appendChild(dot);
-            });
-            var dots = Array.prototype.slice.call(dotsContainer.children);
+.mision-vision .bloque {
+flex: 1 1 300px;
+}
 
-            function update() {
-                track.style.transform = 'translateX(-' + (index * 100) + '%)';
-                dots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
-            }
+.mision-vision h3 {
+color: #0077b6;
+font-size: 20px;
+margin-bottom: 10px;
+}
 
-            function goTo(i) {
-                index = (i + slides.length) % slides.length;
-                update();
-                resetTimer();
-            }
+.mision-vision p {
+line-height: 1.6;
+color: #374151;
+}
 
-            function next() { goTo(index + 1); }
-            function prev() { goTo(index - 1); }
+/* MESA DIRECTIVA */
+.tarjetas {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+margin-top: 30px;
+}
 
-            function resetTimer() {
-                clearInterval(timer);
-                timer = setInterval(next, 5000);
-            }
+.miembro {
+width: 220px;
+text-align: center;
+}
 
-            nextBtn.addEventListener('click', next);
-            prevBtn.addEventListener('click', prev);
-            carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
-            carousel.addEventListener('mouseleave', resetTimer);
+.foto {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+background-color: #d1d5db;
+margin: 0 auto 15px;
+display: block;
+object-fit: cover;
+}
 
-            update();
-            resetTimer();
-        })();
-    </script>
+.miembro h3 {
+font-size: 18px;
+margin-bottom: 4px;
+}
 
-</body>
+.cargo {
+font-weight: bold;
+color: #0077b6;
+font-size: 14px;
+}
 
-</html>
+.carrera {
+font-size: 13px;
+color: #6b7280;
+}
+
+/* PÁGINA DE DETALLE DE DEPARTAMENTO */
+.volver-link {
+display: inline-block;
+margin-bottom: 20px;
+color: #0077b6;
+text-decoration: none;
+font-size: 14px;
+font-weight: bold;
+}
+
+.volver-link:hover {
+text-decoration: underline;
+}
+
+.funciones-lista {
+list-style: disc;
+text-align: left;
+max-width: 560px;
+margin: 20px auto 0;
+color: #374151;
+line-height: 1.9;
+}
+
+.actividad-hero-placeholder {
+width: 100%;
+max-width: 700px;
+height: 320px;
+margin: 20px auto;
+border-radius: 12px;
+background: linear-gradient(135deg, #111827, #0077b6);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+}
+
+.actividad-hero-img {
+width: 100%;
+max-width: 700px;
+height: 320px;
+margin: 20px auto;
+border-radius: 12px;
+object-fit: cover;
+display: block;
+}
+
+.actividad-meta {
+color: #0077b6;
+font-weight: bold;
+margin-bottom: 14px;
+}
+
+.actividad-galeria {
+max-width: 900px;
+margin: 20px auto 60px;
+padding: 0 20px;
+text-align: center;
+}
+
+.galeria-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 16px;
+margin-top: 20px;
+}
+
+.galeria-item {
+width: 260px;
+height: 170px;
+border-radius: 10px;
+background-color: #e5e7eb;
+color: #6b7280;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 14px;
+}
+
+/* DEPARTAMENTOS */
+.departamentos {
+max-width: 1040px;
+}
+
+.depto-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 25px;
+margin-top: 30px;
+}
+
+.depto {
+width: 220px;
+background-color: #f9fafb;
+border: 1px solid #e5e7eb;
+border-radius: 10px;
+padding: 0 0 20px;
+display: block;
+text-decoration: none;
+color: inherit;
+overflow: hidden;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.depto:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.depto > img {
+width: 100%;
+height: 120px;
+object-fit: cover;
+display: block;
+margin-bottom: 15px;
+}
+
+.depto h3 {
+color: #0077b6;
+font-size: 18px;
+margin-bottom: 10px;
+padding: 0 20px;
+}
+
+.depto p {
+font-size: 14px;
+color: #6b7280;
+line-height: 1.5;
+padding: 0 20px;
+}
+
+.depto-lider {
+margin-top: 16px;
+padding: 14px 20px 4px;
+border-top: 1px solid #e5e7eb;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.depto-lider .lider-nombre {
+font-size: 14px;
+font-weight: bold;
+color: #1f2937;
+padding: 0;
+margin-bottom: 2px;
+}
+
+.depto-lider .lider-cargo {
+font-size: 12px;
+color: #0077b6;
+padding: 0;
+}
+
+/* ACTIVIDADES - CARRUSEL */
+.carousel {
+position: relative;
+width: 92vw;
+max-width: 1150px;
+left: 50%;
+transform: translateX(-50%);
+margin-top: 30px;
+overflow: hidden;
+border-radius: 16px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-track {
+display: flex;
+transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+min-width: 100%;
+box-sizing: border-box;
+display: block;
+text-decoration: none;
+color: inherit;
+}
+
+.carousel-img-placeholder {
+width: 100%;
+height: 420px;
+background: linear-gradient(135deg, #111827, #0077b6);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+letter-spacing: 0.5px;
+}
+
+.carousel-img {
+width: 100%;
+height: 420px;
+object-fit: cover;
+display: block;
+}
+
+.carousel-caption {
+background-color: #111827;
+}
+
+.carousel-caption-inner {
+padding: 22px 28px;
+text-align: left;
+}
+
+.carousel-caption h3 {
+color: white;
+font-size: 20px;
+margin-bottom: 6px;
+}
+
+.carousel-caption p {
+font-size: 14px;
+color: #9ca3af;
+}
+
+.carousel-arrow {
+position: absolute;
+top: 0;
+height: 420px;
+width: 56px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: transparent;
+color: white;
+border: none;
+cursor: pointer;
+font-size: 22px;
+opacity: 0.6;
+transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+opacity: 1;
+background: rgba(0, 0, 0, 0.25);
+}
+
+.carousel-prev {
+left: 0;
+}
+
+.carousel-next {
+right: 0;
+}
+
+.carousel-dots {
+display: flex;
+justify-content: center;
+gap: 8px;
+padding: 16px 0 4px;
+}
+
+.dot {
+width: 9px;
+height: 9px;
+border-radius: 50%;
+background-color: #d1d5db;
+border: none;
+cursor: pointer;
+padding: 0;
+transition: background-color 0.2s ease;
+}
+
+.dot.active {
+background-color: #0077b6;
+}
+
+/* COLABORADORES */
+.colab-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+margin-top: 30px;
+}
+
+.colab-logo-frame {
+width: 175px;
+height: 105px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f9fafb;
+border: 1px solid #e5e7eb;
+border-radius: 10px;
+color: #9ca3af;
+font-size: 12px;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.colab-logo-frame:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+border-color: #0077b6;
+color: #0077b6;
+}
+
+.colab-logo-frame {
+cursor: pointer;
+font-family: inherit;
+}
+
+/* VENTANA EMERGENTE DE COLABORADORES */
+.modal-overlay {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(17, 24, 39, 0.6);
+align-items: center;
+justify-content: center;
+padding: 20px;
+z-index: 100;
+}
+
+.modal-overlay.abierto {
+display: flex;
+}
+
+.modal-box {
+position: relative;
+background: white;
+border-radius: 14px;
+max-width: 480px;
+width: 100%;
+padding: 30px;
+text-align: left;
+max-height: 85vh;
+overflow-y: auto;
+}
+
+.modal-close {
+position: absolute;
+top: 14px;
+right: 14px;
+width: 32px;
+height: 32px;
+border: none;
+background: #f3f4f6;
+color: #1f2937;
+border-radius: 50%;
+font-size: 18px;
+line-height: 1;
+cursor: pointer;
+}
+
+.modal-close:hover {
+background: #e5e7eb;
+}
+
+.modal-img-placeholder {
+width: 100%;
+height: 180px;
+border-radius: 10px;
+background: linear-gradient(135deg, #111827, #0077b6);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 14px;
+margin-bottom: 18px;
+}
+
+.modal-box h3 {
+color: #1f2937;
+font-size: 20px;
+margin-bottom: 6px;
+}
+
+.modal-meta {
+color: #0077b6;
+font-weight: bold;
+font-size: 13px;
+margin-bottom: 12px;
+}
+
+.modal-box p:not(.modal-meta) {
+color: #374151;
+font-size: 14px;
+line-height: 1.6;
+}
+
+.colab-logo-frame img {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+}
+
+/* RAMAS HERMANAS */
+.ramas-strip {
+position: relative;
+width: 100vw;
+left: 50%;
+transform: translateX(-50%);
+margin-top: 30px;
+background-color: #111827;
+padding: 30px 20px;
+overflow-x: auto;
+}
+
+.ramas-grid {
+display: flex;
+flex-wrap: nowrap;
+gap: 24px;
+width: max-content;
+margin: 0 auto;
+}
+
+.rama-card {
+width: 140px;
+flex: 0 0 auto;
+text-align: center;
+}
+
+.rama-logo-frame {
+width: 100px;
+height: 100px;
+margin: 0 auto 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;
+border-radius: 8px;
+padding: 8px;
+color: #9ca3af;
+font-size: 11px;
+text-align: center;
+}
+
+.rama-logo-frame img {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+}
+
+.rama-nombre {
+font-weight: bold;
+color: white;
+font-size: 14px;
+margin-bottom: 10px;
+}
+
+.rama-social {
+display: flex;
+justify-content: center;
+gap: 8px;
+}
+
+.rama-social a {
+width: 36px;
+height: 36px;
+background-color: rgba(255, 255, 255, 0.12);
+color: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 15px;
+transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rama-social a:hover {
+transform: translateY(-3px) scale(1.08);
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.rama-social a:has(.fa-facebook):hover {
+background-color: #1877f2;
+color: white;
+}
+
+.rama-social a:has(.fa-instagram):hover {
+background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+color: white;
+}
+
+.rama-social a:has(.fa-globe):hover {
+background-color: #0077b6;
+color: white;
+}
+
+/* CONTACTO */
+.dato-contacto {
+font-size: 18px;
+font-weight: bold;
+margin-top: 15px;
+color: #0077b6;
+}
+
+.dato-contacto a {
+color: inherit;
+text-decoration: none;
+}
+
+.dato-contacto a:hover {
+text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+background-color: #111827;
+color: white;
+text-align: center;
+padding: 40px 20px;
+}
+
+.redes {
+margin-top: 15px;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+.redes a {
+color: white;
+font-size: 22px;
+transition: color 0.2s ease;
+}
+
+.redes a:hover {
+color: #0077b6;
+}
+
+.ultima-actualizacion {
+margin-top: 20px;
+font-size: 11px;
+color: #6b7280;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+.nav-links {
+gap: 14px;
+}
+
+.nav-links a {
+font-size: 13px;
+}
+
+.header-container {
+justify-content: center;
+}
+
+.header-logo-frame {
+width: 64px;
+height: 42px;
+padding: 4px;
+}
+
+header h1 {
+font-size: 34px;
+}
+
+header p {
+font-size: 16px;
+}
+
+.carousel-img-placeholder {
+height: 200px;
+font-size: 13px;
+}
+
+.carousel-img {
+height: 200px;
+}
+
+.carousel-arrow {
+height: 200px;
+width: 34px;
+font-size: 16px;
+}
+
+.ramas-strip {
+padding: 20px 16px;
+}
+
+.ramas-grid {
+gap: 14px;
+}
+
+.rama-card {
+width: 100px;
+}
+
+.rama-logo-frame {
+width: 70px;
+height: 70px;
+}
+}
