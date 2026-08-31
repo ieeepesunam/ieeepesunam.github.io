@@ -551,11 +551,11 @@ button:hover {
     position: relative;
     background: white;
     border-radius: 14px;
-    max-width: 600px;
+    max-width: 850px;
     width: 100%;
     padding: 30px;
     text-align: left;
-    max-height: 85vh;
+    max-height: 92vh;
     overflow-y: auto;
     transform: scale(0.92) translateY(12px);
     transition: transform 0.25s ease;
@@ -586,7 +586,7 @@ button:hover {
 
 .modal-img-placeholder {
     width: 100%;
-    height: 280px;
+    height: 520px;
     border-radius: 10px;
     background: linear-gradient(135deg, #111827, #0077b6);
     color: white;
@@ -614,6 +614,19 @@ button:hover {
     color: #374151;
     font-size: 14px;
     line-height: 1.6;
+}
+
+.modal-ver-mas {
+    display: inline-block;
+    margin-top: 16px;
+    color: #0077b6;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.modal-ver-mas:hover {
+    text-decoration: underline;
 }
 
 .colab-logo-frame img {
@@ -821,5 +834,9 @@ footer {
     .rama-logo-frame {
         width: 70px;
         height: 70px;
+    }
+
+    .modal-img-placeholder {
+        height: 260px;
     }
 }

@@ -245,6 +245,8 @@
                     <h3 id="colab-modal-title"></h3>
                     <p class="modal-meta" id="colab-modal-meta"></p>
                     <p id="colab-modal-desc"></p>
+                    <a href="#" id="colab-modal-link" target="_blank" rel="noopener" class="modal-ver-mas">Ver más
+                        &rarr;</a>
                 </div>
             </div>
         </section>
@@ -386,43 +388,50 @@
                     fecha: '[Fecha]',
                     lugar: '[Lugar]',
                     desc: '[Descripción de la actividad realizada con Schneider Electric: qué se hizo, quién participó y qué se aprendió.]',
-                    img: 'fotos/schneider-prueba.png'
+                    img: 'fotos/schneider-prueba.png',
+                    link: 'colaboradores/schneider.html'
                 },
                 burns: {
                     titulo: 'Burns & McDonnell',
                     fecha: '[Fecha]',
                     lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con Burns & McDonnell.]'
+                    desc: '[Descripción de la actividad realizada con Burns & McDonnell.]',
+                    link: 'colaboradores/burns.html'
                 },
                 siemens: {
                     titulo: 'Siemens',
                     fecha: '[Fecha]',
                     lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con Siemens.]'
+                    desc: '[Descripción de la actividad realizada con Siemens.]',
+                    link: 'colaboradores/siemens.html'
                 },
                 condumex: {
                     titulo: 'Condumex',
                     fecha: '[Fecha]',
                     lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con Condumex.]'
+                    desc: '[Descripción de la actividad realizada con Condumex.]',
+                    link: 'colaboradores/condumex.html'
                 },
                 abb: {
                     titulo: 'ABB',
                     fecha: '[Fecha]',
                     lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con ABB.]'
+                    desc: '[Descripción de la actividad realizada con ABB.]',
+                    link: 'colaboradores/abb.html'
                 },
                 ineel: {
                     titulo: 'INEEL',
                     fecha: '[Fecha]',
                     lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con INEEL.]'
+                    desc: '[Descripción de la actividad realizada con INEEL.]',
+                    link: 'colaboradores/ineel.html'
                 },
                 cenace: {
                     titulo: 'CENACE',
                     fecha: '[Fecha]',
                     lugar: '[Lugar]',
-                    desc: '[Descripción de la actividad realizada con CENACE.]'
+                    desc: '[Descripción de la actividad realizada con CENACE.]',
+                    link: 'colaboradores/cenace.html'
                 }
             };
 
@@ -434,6 +443,7 @@
             var descEl = document.getElementById('colab-modal-desc');
             var closeBtn = document.getElementById('colab-modal-close');
             var imgEl = document.getElementById('colab-modal-img');
+            var linkEl = document.getElementById('colab-modal-link');
             var botones = document.querySelectorAll('[data-colab]');
 
             function abrir(key) {
@@ -442,6 +452,12 @@
                 tituloEl.textContent = d.titulo;
                 metaEl.textContent = '📅 ' + d.fecha + '   ·   📍 ' + d.lugar;
                 descEl.textContent = d.desc;
+                if (d.link) {
+                    linkEl.href = d.link;
+                    linkEl.style.display = 'inline-block';
+                } else {
+                    linkEl.style.display = 'none';
+                }
                 if (d.img) {
                     imgEl.style.backgroundImage = "url('" + d.img + "')";
                     imgEl.style.backgroundSize = 'cover';
